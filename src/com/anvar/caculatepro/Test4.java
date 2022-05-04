@@ -15,11 +15,15 @@ public class Test4 {
             throw new NumberFormatException("Не математическая операция");
         }
 
-
         String b = arrSplit[1];
 
         int a = 0;
         int c = 0;
+
+        if (a < 1 || a > 10){
+            throw new Error("ТЗ:\n" +
+                    "Ввод чисел меньше 1 или больше 10");
+        }
 
 
         if (!(Arrays.asList(IndianTest.nums).contains(arrSplit[0])) && !(Arrays.asList(IndianTest.nums).contains(arrSplit[2]))) {
