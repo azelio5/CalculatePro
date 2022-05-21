@@ -20,17 +20,21 @@ public class Test4 {
         int a = 0;
         int c = 0;
 
-        if (a < 1 || a > 10){
-            throw new Error("ТЗ:\n" +
-                    "Ввод чисел меньше 1 или больше 10");
-        }
-
 
         if (!(Arrays.asList(IndianTest.nums).contains(arrSplit[0])) && !(Arrays.asList(IndianTest.nums).contains(arrSplit[2]))) {
             try {
 
                 a = Integer.parseInt(arrSplit[0]);
                 c = Integer.parseInt(arrSplit[2]);
+
+                System.out.println("Вывод а: " + a);
+                System.out.println("Вывод c: " + c);
+
+                if ((a < 1 || a > 10) || (c < 1 || c > 10)) {
+                    throw new Error("ТЗ:\n" +
+                            "Ввод чисел меньше 1 или больше 10");
+                }
+
             } catch (NumberFormatException e) {
 
                 throw new Error("т.к. используются одновременно разные системы счисления");
